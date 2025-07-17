@@ -1,7 +1,12 @@
+'use client'
+import { usePathname } from "next/navigation"
+
 export default function Layout({children}){
+    const currentPathName=usePathname();
     return(
         <>
-        <h1>Malav is My name</h1>
+       {currentPathName!=="/contact/employee"?
+        <h1>Malav is My name</h1>:null}
         {children}
         </>
     )
