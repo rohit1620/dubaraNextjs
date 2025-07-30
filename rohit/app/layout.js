@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import './styles.css'
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,9 @@ export default function RootLayout({ children }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Exile&display=swap" rel="stylesheet"></link>
       </head> */}
+      <head>
+     {/* <script src="/features.js"></script> */}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* <h1> My name is Rohit Kumar Malav </h1> */}
         {children}
