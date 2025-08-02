@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
 <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Exile&display=swap" rel="stylesheet"></link>
       </head> */}
       <head>
-     {/* <script src="/features.js"></script> */}
+    <link rel="stylesheet" href="/style.css"></link>
+     <script src="/features.js"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* <h1> My name is Rohit Kumar Malav </h1> */}
