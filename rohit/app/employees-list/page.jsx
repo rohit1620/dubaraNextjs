@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Delete from "../components/Delete";
 
 const getEmployees = async () => {
@@ -15,6 +16,7 @@ const EmployeesList = async () => {
         <div key={i}>
           <h3>{el.name}</h3>
           <Delete id={el.empId} />
+          <Link href={`/employees-list/${el.empId}/update`}>Edit</Link>
         </div>
       ))}
     </>

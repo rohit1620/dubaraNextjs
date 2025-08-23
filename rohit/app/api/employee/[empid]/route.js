@@ -23,3 +23,15 @@ export const DELETE=(req,value)=>{
        return NextResponse.json({result:"item not found ",success:false},{status:400})
      }
 }
+
+export const PUT=async(req,value)=>{
+  const payload=await req.json();
+  payload.empId=value.params.empid;
+  console.log("idid",payload);
+  
+  const {empId,name,age}=payload;
+  if(!empId||!name||!age){
+    return NextResponse.json({result:"Error",success:false},{status:400})
+  }
+    return NextResponse.json({result:"Success",success:true},{status:200})
+}
