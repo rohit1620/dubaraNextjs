@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const AddEmployee = () => {
@@ -17,6 +18,9 @@ const AddEmployee = () => {
 
     if (data.success) {
       alert("data added");
+      setName("");
+      setAge("");
+      setSalary("");
     } else {
       alert("not added bola na not added");
     }
@@ -50,7 +54,27 @@ const AddEmployee = () => {
         onChange={(e) => setSalary(e.target.value)}
       />
       <br /> <br />
-      <button onClick={addEmployee}>submit</button>
+      <button
+        onClick={addEmployee}
+        style={{
+          backgroundColor: "green",
+          color: "white",
+          padding: "5px 10px",
+        }}
+      >
+        submit
+      </button>
+      <br /> <br />
+      <Link href="/" style={{ backgroundColor: "black", color: "white" }}>
+        Back to Home
+      </Link>
+      <br />
+      <Link
+        href="/mongo-get"
+        style={{ backgroundColor: "blue", color: "white" }}
+      >
+        getData
+      </Link>
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 export const GET=async()=>{
     await mongoose.connect(connectString);
     const user= await User.find()
-    return NextResponse.json({result:"success",data:user})
+    return NextResponse.json({result:user,success:true})
 }
 
 export const POST=async(req)=>{
