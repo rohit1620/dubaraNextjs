@@ -29,6 +29,9 @@ const EmployeeGEt = async () => {
               <td>{el.name}</td>
               <td>{el.age}</td>
               <td>{el.salary}</td>
+              <td>
+                <Link href={`/mongo-get/${el._id}`}>Edit</Link>
+              </td>
             </tr>
           ))}
         </tbody>
